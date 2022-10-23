@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './home.module.css'
+import CSS from 'csstype';
+import Button from 'react-bootstrap/Button';
 
+
+const h1: CSS.Properties = {
+    textAlign: "center"
+}
 export default class Home extends React.Component<any,any>{
 
      constructor(props: any){
@@ -13,13 +20,12 @@ export default class Home extends React.Component<any,any>{
         }
      render(){
          return (
-             <div>
+             <div className={styles.centerized_page}>
                  <p>
-                     Home Pages
+                     Home Page
                  </p>
-                 <Link to={"/fun"}>Fun</Link>
                  <p>{this.state.counter}</p>
-                 <button onClick={this.increment}>Count</button>
+                 <Button variant='primary' onClick={this.increment}>Count</Button>
              </div>
          )
      }

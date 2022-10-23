@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
 import Fun from "./fun"
 
 ReactDOM.render(
   <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<App/>}/>
-    <Route path='/fun' element={<Fun/>}/>
-  </Routes>
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );
